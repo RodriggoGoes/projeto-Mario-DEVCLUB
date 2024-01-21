@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Super Mario</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="caixa-video-mario">
+        <video src="video.mp4" autoplay muted loop></video>
+        <div class="mascara-video"></div>
+    </div>
+
+    <div class="caixa-principal">
+        <img src="logo.png" alt="logo do super mario" class="logo-mario">
+        <p>Encanadores Mario & Luugi - Resolvendo Seus Problemas</p>
+        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
+        ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a
+        vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+        <button onclick="cliqueinobotao()">Fale Conosco</button>
+    </div>
+
+    <img src="mario.png" alt="logo do luigi" class="logo-luigi">
+
+    <form class="fale-conosco">
+        <input placeholder="Seu nome" type="text">
+        <input placeholder="Seu telefone" type="tel">
+        <textarea placeholder="Digite seu problema aqui"></textarea>
+        <button onclick="sumirFormulario()">Enviar formulário</button>
+    </form>
+
+    <div class="mascara-form"></div>
+</body>
+<script>
+    let formulário = document.querySelector(".fale-conosco")
+    let mascara = document.querySelector(".mascara-form")
+
+    console.log(formulário)
+
+    function cliqueinobotao() {
+        formulário.style.left = "700px"
+        mascara.style.visibility = "visible"
+    }
+
+    function sumirFormulario() {
+        formulário.style.left = "-320px"
+        mascara.style.visibility = "hidden"
+    }
+</script>
+
+</html>
